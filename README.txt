@@ -3,7 +3,7 @@ Contributors: raduboncea
 Tags: like button, social plugin,social, facebook, open graph, sharing, share, post, posts, page, pages, plugin, button, I like, I recommend
 Requires at least: 2.0
 Tested up to: 2.9.2
-Stable tag: 1.0
+Stable tag: trunk
 Author URI: http://raduboncea.ro/about/
 
 A light implementation of the Facebook Open Graph: I Like Button social plugin.
@@ -19,6 +19,7 @@ The Like button enables readers to make connections to your pages and share cont
 The plugin is highly customizable:
 
 * Choose disposition: top, bottom
+* Set styling for DIV around the iframe
 * Dimensions: width, height
 * Layout Style: standard or button count
 * Fonts: tahoma, arial, verdana, lucida grande, segoe ui, trebuchet ms
@@ -42,7 +43,13 @@ Go to `Settings` > `FB I Like Button`.
 
 You can overide the settings as per page/post by typing the following code in your post/page: `<!--fbilike-->` if you wish to display the button or `<!--nofbilike-->` if you wish to hide it.
 
+== Changelog ==
+
+= 1.1 =
+
+* Added ability to style the DIV around the iframe.
+
 
 == Screenshots ==
 
-Screenshots are available at: [raduboncea.ro](http://raduboncea.ro/facebook-i-like-button-plugin)
+Screenshots are available at: [raduboncea.ro](http://raduboncea.ro/scripts/i-like-button-plugin/)

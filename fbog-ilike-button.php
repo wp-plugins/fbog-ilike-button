@@ -3,7 +3,7 @@
 Plugin Name: Facebook OpenGraph I Like Button
 Plugin URI: http://raduboncea.ro/
 Description: Integrates the facebook open graph I Like Button feature.  [<a href="options-general.php?page=fbog-ilike-button.php">Settings</a>]
-Version: 1.0
+Version: 1.1
 Author: Radu Boncea
 Author URI: http://raduboncea.ro/about/
 */
@@ -56,7 +56,10 @@ function FB_ILIKE_BUTTON_show($content) {
 	)	
 	return $content;
 	
-	$_content = '<div style="margin-top:20px">'.FB_ILIKE_BUTTON(true).'</div>';
+	if(get_option('FB_ILIKE_BUTTON_div_style')=='') $_fb_div_style = 'float:left;margin-right:20px;';
+    	else $_fb_div_style = get_option('FB_ILIKE_BUTTON_div_style');
+	
+	$_content = '<div style="'.$_fb_div_style.'">'.FB_ILIKE_BUTTON(true).'</div>';
 	if(get_option('FB_ILIKE_BUTTON_disposition')=='top'){
 		$content = $_content.$content;
 	}else{
@@ -87,6 +90,8 @@ function FB_ILIKE_BUTTON_options_page() {
 		 update_option( 'FB_ILIKE_BUTTON_action', $_POST['FB_ILIKE_BUTTON_action'] );
 		 update_option( 'FB_ILIKE_BUTTON_colorscheme', $_POST['FB_ILIKE_BUTTON_colorscheme'] );
 		 update_option( 'FB_ILIKE_BUTTON_font', $_POST['FB_ILIKE_BUTTON_font'] );
+		 update_option( 'FB_ILIKE_BUTTON_div_style', $_POST['FB_ILIKE_BUTTON_div_style'] );
+		 
 		 
 		 
 	?>
@@ -167,6 +172,15 @@ function FB_ILIKE_BUTTON_options_page() {
 		               		&nbsp;&nbsp;X&nbsp;&nbsp;
 		               		<input size="4" name="FB_ILIKE_BUTTON_height" type="text" value="<?=$_fb_height?>" />px
 		               		&nbsp;&nbsp;&nbsp;&nbsp; Width x Height
+		                </label><br/>
+		                <label>
+		                	<?php 
+		                	if(get_option('FB_ILIKE_BUTTON_div_style')=='') $_fb_div_sytle = 'float:left;margin-right:20px;';
+		                		else $_fb_div_sytle = get_option('FB_ILIKE_BUTTON_div_style');
+							
+		                	?>
+		                	<input size="32" name="FB_ILIKE_BUTTON_div_style" type="text" value="<?=$_fb_div_sytle?>" />
+		                	DIV Style
 		                </label><br/>
 		                <label>
 	            		<select name="FB_ILIKE_BUTTON_action">
