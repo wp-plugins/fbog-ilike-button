@@ -43,6 +43,17 @@ Go to `Settings` > `FB I Like Button`.
 
 You can overide the settings as per page/post by typing the following code in your post/page: `<!--fbilike-->` if you wish to display the button or `<!--nofbilike-->` if you wish to hide it.
 
+= How can I position the button to left/right relative to content? =
+
+Use the option DIV Style and style the div around the iframe. Eg. if you want to position the button to the right write something like
+::float:right; margin:0px:: But pay attention not to mess other elements and their position. Use clear:top,bottom, left carefully.
+
+== Screenshots ==
+1. I Like Button along with Tweetmeme and Buzz.
+2. I Like Button alone, float left
+3. Admin settings and options
+
+
 == Changelog ==
 
 = 1.1 =
@@ -50,6 +61,3 @@ You can overide the settings as per page/post by typing the following code in yo
 * Added ability to style the DIV around the iframe.
 
 
-== Screenshots ==
-
-Screenshots are available at: [raduboncea.ro](http://raduboncea.ro/scripts/i-like-button-plugin/)
