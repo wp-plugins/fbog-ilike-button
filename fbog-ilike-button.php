@@ -43,7 +43,7 @@ function FB_ILIKE_BUTTON($output_buffering=false) {
 	){
 		//generate the xfbml
 		$fb_script = "
-			<fb:like href=\"{$linkurl}\" layout=\"{$_fb_layout_style}\" show_faces=\"{$_fb_show_faces}\" width=\"{$_fb_width}\" font=\"\" action=\"{$_fb_action}\" colorscheme=\"{$_fb_colorscheme}\" />
+			<fb:like href=\"{$linkurl}\" layout=\"{$_fb_layout_style}\" show_faces=\"{$_fb_show_faces}\" width=\"{$_fb_width}\" font=\"{$_fb_font}\" action=\"{$_fb_action}\" colorscheme=\"{$_fb_colorscheme}\" />
 		";
 	}else{
 		//generate the iframe
