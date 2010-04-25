@@ -17,6 +17,7 @@ It implements both **iframe** and **XFBML**. Defaults to iframe for stability. C
 The Like button enables readers to make connections to your pages and share content back to their friends on Facebook with one click.
 
 The plugin is highly customizable:
+
 * Choose platform: iframe for lame, XFBML for geeks
 * Choose disposition: top, bottom
 * Set styling for DIV container around the iframe
